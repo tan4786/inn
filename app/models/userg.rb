@@ -1,0 +1,2 @@
+class Userg < ApplicationRecord
+end

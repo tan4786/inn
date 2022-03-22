@@ -30,9 +30,10 @@ class RentalsController < ApplicationController
       owner_id: @current_user.id
       )
     if @rental.save!
-  
-        flash[:notice] = "お部屋を登録しました"
-        
+      
+      @rental.save!
+        flash[:notice] = "ルームを登録しました"
+        redirect_to("/rentals/#{@current_user.id}/entry")
     else
        flash[:notice] = "登録失敗しました"
       render("rentals/new")
@@ -42,6 +43,16 @@ class RentalsController < ApplicationController
   
   def edit
     @rental = @current_user.rentals.find_by(id: params[:user][:user_id])
+  end
+  
+  def update
+  @user = User.find(params[:id])
+  if @user.update(params.require(:user).permit(:name, :email, :age, :introduction))
+    flash[:notice] = "ユーザーIDが「#{@user.id}」の情報を更新しました"
+    redirect_to :users
+  else
+    render "edit"
+  end
   end
   
   def destroy
