@@ -1,0 +1,2 @@
+class Usera < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class UserIdRentalsReservation < ApplicationRecord
+end
