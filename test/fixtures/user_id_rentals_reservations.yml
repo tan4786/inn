@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rentals: 
+  user_id: 
+  string: 
+  reservations: 
+  user_id: 
+  string: 
+
+two:
+  rentals: 
+  user_id: 
+  string: 
+  reservations: 
+  user_id: 
+  string: 

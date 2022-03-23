@@ -1,0 +1,2 @@
+class AddRentalIdReservation < ApplicationRecord
+end

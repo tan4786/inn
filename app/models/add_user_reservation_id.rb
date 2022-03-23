@@ -1,0 +1,2 @@
+class AddUserReservationId < ApplicationRecord
+end
