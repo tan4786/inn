@@ -33,7 +33,7 @@ class UsersController < ApplicationController
     if params[:user][:user_image]
       @current_user.user_image = "#{@current_user.id}.jpg"
       image = params[:user][:user_image]
-      File.binwrite("/home/ec2-user/environment/subako/public/images/user_images/#{@current_user.user_image}", image.read)
+      File.binwrite("/home/ec2-user/environment/innnew/public/images/user_images/#{@current_user.user_image}", image.read)
     end
     if @current_user.save!
       redirect_to("/users/#{@current_user.id}")
@@ -66,4 +66,5 @@ class UsersController < ApplicationController
     flash[:notice] = "ログアウトしました"
     redirect_to("/rentals/top")
   end
+  
 end
